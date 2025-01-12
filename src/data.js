@@ -5,6 +5,7 @@ export const cryptoData = {
       icon: 'https://static.coinstats.app/coins/1650455588819.png',
       name: 'Bitcoin',
       symbol: 'BTC',
+      testPair: 'BTCUSDT',
       rank: 1,
       price: 44870.39834657236,
       priceBtc: 1,

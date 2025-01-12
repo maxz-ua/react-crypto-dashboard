@@ -3,7 +3,7 @@ import { ArrowDownOutlined, ArrowUpOutlined } from '@ant-design/icons';
 import {capitalize} from '../../utils';
 import {useContext} from "react";
 import CryptoContext from "../../context/crypto-context.jsx";
-
+import PortfolioChart from "../PortfolioChart.jsx";
 
 const siderStyle = {
     paddingLeft: '1rem',
@@ -14,8 +14,9 @@ export default function AppSider(){
 
     return (
         <Layout.Sider width="25%" style={siderStyle}>
+            <PortfolioChart />
             {assets.map((asset) => (
-                <Card key={asset.id} style={{marginBottom: '1rem'}}>
+                <Card key={asset.id} style={{marginBottom: '1rem', height: 175}}>
                     <Statistic
                         title={capitalize(asset.id)}
                         value={asset.totalAmount}
